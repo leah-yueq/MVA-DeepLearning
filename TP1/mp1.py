@@ -116,8 +116,8 @@ def generate_dataset_regression(nb_samples, noise=0.0):
     Y = np.zeros([nb_samples, 6])
     print('Creating data:')
     for i in range(nb_samples):
-        if i % 10 == 0:
-            print(i)
+  #      if i % 10 == 0:
+  #          print(i)
         [X[i], Y[i]] = generate_a_triangle(noise, True)
     X = (X + noise) / (255 + 2 * noise)
     return [X, Y]
